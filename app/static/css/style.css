@@ -1,18 +1,19 @@
-/* 🌙 Dark & Chic Theme */
 body {
   background-color: #0d1117;
   color: #e6edf3;
   font-family: "Poppins", "Segoe UI", sans-serif;
+  -webkit-transition: background 0.3s ease, color 0.3s ease;
   transition: background 0.3s ease, color 0.3s ease;
 }
 
 .hero {
-  background: linear-gradient(135deg, #1f2937, #111827);
+  background: -webkit-linear-gradient(135deg, #1a1f25, #0d1117);
+  background: linear-gradient(135deg, #1a1f25, #0d1117);
   color: #e6edf3;
   padding: 80px 20px;
   text-align: center;
   border-radius: 16px;
-  box-shadow: 0 0 30px rgba(108, 99, 255, 0.3);
+  box-shadow: 0 0 30px rgba(0, 188, 212, 0.3);
   animation: fadeIn 1s ease forwards;
 }
 
@@ -33,39 +34,99 @@ body {
   color: #e6edf3;
   border: 1px solid #2e3440;
   border-radius: 12px;
+  -webkit-transition: transform 0.3s ease, box-shadow 0.3s ease;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
+  -webkit-transform: translateY(-8px);
   transform: translateY(-8px);
-  box-shadow: 0 0 25px rgba(108, 99, 255, 0.4);
+  box-shadow: 0 0 25px rgba(0, 188, 212, 0.4);
 }
 
 .card-title {
-  color: #6c63ff;
+  color: #00bcd4;
 }
 
 .btn-primary {
-  background-color: #6c63ff;
+  background-color: #00bcd4;
   border: none;
   color: #fff;
   transition: all 0.3s ease;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(108, 99, 255, 0.4);
+  box-shadow: 0 0 10px rgba(0, 188, 212, 0.4);
 }
 
 .btn-primary:hover {
-  background-color: #00bcd4;
-  box-shadow: 0 0 15px rgba(0, 188, 212, 0.6);
+  background-color: #5ad8e6;
+  box-shadow: 0 0 15px rgba(90, 216, 230, 0.6);
 }
 
-/* Animations */
+@-webkit-keyframes fadeIn {
+  from { opacity: 0; -webkit-transform: translateY(20px); transform: translateY(20px); }
+  to { opacity: 1; -webkit-transform: translateY(0); transform: translateY(0); }
+}
+
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
+@-webkit-keyframes slideUp {
+  from { opacity: 0; -webkit-transform: translateY(50px); transform: translateY(50px); }
+  to { opacity: 1; -webkit-transform: translateY(0); transform: translateY(0); }
+}
+
 @keyframes slideUp {
   from { opacity: 0; transform: translateY(50px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+@-webkit-keyframes slideInLeft {
+  from { opacity: 0; -webkit-transform: translateX(-50px); transform: translateX(-50px); }
+  to { opacity: 1; -webkit-transform: translateX(0); transform: translateX(0); }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@-webkit-keyframes slideInRight {
+  from { opacity: 0; -webkit-transform: translateX(50px); transform: translateX(50px); }
+  to { opacity: 1; -webkit-transform: translateX(0); transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.animate-left {
+  -webkit-animation: slideInLeft 0.8s ease-out forwards;
+  animation: slideInLeft 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-right {
+  -webkit-animation: slideInRight 0.8s ease-out forwards;
+  animation: slideInRight 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.container h2, h3 {
+  color: #00bcd4;
+}
+
+.contact-title {
+  color: #00bcd4;
+}
+
+.icon {
+  background: #2e3440;
+  color: #00bcd4;
+}
+
+.connector-line {
+  background-color: #00bcd4;
 }
